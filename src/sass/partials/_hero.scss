@@ -2,11 +2,9 @@
     background-color: $IBgColor;
     position: relative;
     margin: 0 auto;
-    padding-bottom: 26px;
-    @media(min-width: 768px) {
-        padding-bottom: 320px;
-    }
     &__container {
+        padding-bottom: 150px;
+        background-image: url(../images/circlebg.png);
         background-repeat: no-repeat;
         background-size: contain;
         background-position: right;
@@ -17,9 +15,13 @@
         }
         @media(min-width: 768px) {
         background-image: url(../images/circlebg@2.png);
-        background-position: center;
+        background-position: right;
         background-repeat: no-repeat;
+        transform: translateY(-46px);
+        margin-right: 137px;
+        height: 322px;
         }
+
     }
     &__container-bg {
         display: flex;
@@ -34,6 +36,12 @@
         top: 9px;
         right: 32px;
         z-index: 1;
+        @media(min-width: 768px) {
+            height: 336px;
+            width: 143px;
+            right: 110px;
+            top: 32px;
+        }
 
     }
     &__left-container {
@@ -41,6 +49,9 @@
         flex-direction: column;
         padding-left: 20px;
         margin-top: 110px;
+        @media(min-width: 768px) {
+            margin-top: 45px;
+        }
 
     }
     &__titel {
@@ -53,10 +64,17 @@
         text-transform: uppercase;
         color: $IColor;
         z-index: 2;
+        @media(min-width: 768px) {
+            font-size: 22px;
+        }
         &--color {
             color: $btnColor;
             font-size: 48px;
+            @media(min-width: 768px){
+                font-size: 34px;
+            }
         }
+    
     }
     &__container-btn {
         display: flex;
@@ -85,9 +103,88 @@
         }
     }
     &__wrapper-pics {
-        display: none;  
+        display: none;
+        @media(min-width: 768px) {
+            display: flex;
+            align-items: center;
+        }  
+    }
+    @media(min-width: 768px ) {
+    &__pic {
+        width: 124px;
+        height: 122px;
+        margin-left: 34px;
+        margin-top: 19px;
+    }
+    @media(min-width: 768px) {
+    &__container-description {
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+
+    }
+    }
+    @media(min-width: 768px) {
+    &__description {
+        max-width: 114px;
+        max-height: 48px;
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 8px;
+        line-height: 1.5;
+        color: $IColor;
+    }
+    }
     }
     &__right-container {
         display: none;
+        @media(min-width: 768px) {
+            display: flex;
+            justify-content: right;
+            margin-right: -95px;
+            margin-top: -264px;
+        }
+    }
+    @media(min-width: 768px) {
+    &__stories {
+        width: fit-content;
+        position: relative;
+        z-index: 2;
+        font-family: 'Titan One';
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.4;
+    letter-spacing: 0.04em;
+    color: $IIIColor;
+    }
+    &__places {
+        font-family: 'DM Sans';
+        font-size: 8px;
+        line-height: 1.25;
+        color: $IColor;
+        display: flex;
+    }
+    &__stories-cloud {
+        width: 16px;
+        height: 16px;
+        background-color: $IColor;
+        position: absolute;
+        left: 25px;
+        top:0;
+        border-radius: 50%;
+        z-index: -1;
+    }
+    &__right-container-pics {
+        position: absolute;
+        top: 234px;
+        right: -95px;
+    }
+    &__right-container-pic {
+        width: 168px;
+        height: 133px;
+    }
+
+
     }
 }
