@@ -1,0 +1,93 @@
+.hero {
+    background-color: $IBgColor;
+    position: relative;
+    margin: 0 auto;
+    padding-bottom: 26px;
+    @media(min-width: 768px) {
+        padding-bottom: 320px;
+    }
+    &__container {
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right;
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/circlebg@1.png);
+        }
+        @media(min-width: 768px) {
+        background-image: url(../images/circlebg@2.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        }
+    }
+    &__container-bg {
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+        position: relative;
+    }
+    &__bg-pic {
+        position: absolute;
+        width: 170px;
+        height: 410px;
+        top: 9px;
+        right: 32px;
+        z-index: 1;
+
+    }
+    &__left-container {
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+        margin-top: 110px;
+
+    }
+    &__titel {
+        font-family: 'Titan One';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 1.15;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: $IColor;
+        z-index: 2;
+        &--color {
+            color: $btnColor;
+            font-size: 48px;
+        }
+    }
+    &__container-btn {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding-top: 19px;
+        z-index: 3;
+    }
+    &__container-btn-wrap {
+        width: 62px;
+        height: 24px;
+        border-radius: 20px;
+        border: none;
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 8px;
+        line-height: 10px;
+        text-align: center;
+        background-color: $IIIColor;
+        color: $IColor;
+        &--color {
+            width: 83px;
+            background-color: $IColor;
+            color: $IIIColor;
+        }
+    }
+    &__wrapper-pics {
+        display: none;  
+    }
+    &__right-container {
+        display: none;
+    }
+}
